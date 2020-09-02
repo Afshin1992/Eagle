@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #AAA;
+    margin: 0px 50px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #87b5ff;
+    border-radius: 3px;
+    font-size: 2em;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: gainsboro
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 5fr 3fr;
+    grid-template-rows: 100px 500px 100px;
+    grid-template-areas: "top top top" "center center right" "bottom bottom bottom";
+}
+
+.header {
+    grid-area: top;
+}
+
+.content {
+    grid-area: center;
+}
+
+.articles {
+    grid-area: right;
+}
+
+.footer {
+    grid-area: bottom;
+}
+
+
+/* Only for desktop and tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        grid-template-areas: "top top top" "center center center" "bottom bottom right";
+    }
+    #eagle {
+        height: 80px;
+        width: 80px;
+    }
+    p {
+        font-size: small;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 5px;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: gainsboro;
+}
+
+li a.active {
+    color: white;
+    background-color: #87b5ff;
+}
+
+p {
+    font-size: medium;
+    font-size-adjust: initial;
+}

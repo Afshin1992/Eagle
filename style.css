@@ -42,22 +42,6 @@ body {
     grid-area: bottom;
 }
 
-
-/* Only for desktop and tablet */
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .container {
-        grid-template-areas: "top top top" "center center center" "bottom bottom right";
-    }
-    #eagle {
-        height: 80px;
-        width: 80px;
-    }
-    p {
-        font-size: small;
-    }
-}
-
 ul {
     list-style-type: none;
     margin: 10px;
@@ -92,4 +76,20 @@ li a.active {
 p {
     font-size: medium;
     font-size-adjust: initial;
+}
+
+
+/* Only for desktop and tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        grid-template-areas: "top top top" "center center center" "bottom bottom right";
+    }
+    #eagle {
+        height: 80px;
+        width: 80px;
+    }
+    p {
+        font-size: small;
+    }
 }
